@@ -8,39 +8,33 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #0d1b2a;
       color: white;
     }
 
-    header {
-      background-image: url('sfondo.jpg');
+    .hero {
+      background: url('background.jpg') no-repeat center center;
       background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
+      padding: 100px 20px 60px 20px;
       position: relative;
     }
 
-    .btn {
+    .hero button {
       background-color: #ffe082;
-      color: #000;
-      font-weight: bold;
+      border: none;
+      border-radius: 20px;
       padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      margin: 20px 0;
-      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+      cursor: pointer;
+      margin-top: 20px;
     }
 
-    .scroll-indicator {
-      position: absolute;
-      bottom: 20px;
-      font-size: 1.2em;
-      animation: bounce 2s infinite;
+    .scroll-down {
+      font-size: 18px;
+      margin-top: 40px;
+      animation: bounce 1.5s infinite;
     }
 
     @keyframes bounce {
@@ -48,68 +42,87 @@
       50% { transform: translateY(8px); }
     }
 
-    section {
+    .section {
+      background-color: #002144;
       padding: 40px 20px;
-      background-color: #0d1b2a;
+      text-align: left;
     }
 
-    h2 {
+    .section h2 {
       color: #ffe082;
-      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    ul {
+    .section ul {
       list-style: none;
       padding: 0;
-      font-size: 1.2em;
     }
 
-    li {
-      margin: 15px 0;
+    .section li {
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
-    li::before {
+    .section li::before {
       content: "✅ ";
+      margin-right: 8px;
     }
 
-    .offerta {
-      background-color: #001427;
-      padding: 40px 20px;
-    }
-
-    .offerta h2 {
-      color: #ffe082;
-    }
-
-    .offerta ul li::before {
+    .formazione h2::before {
       content: "📘 ";
+    }
+
+    .formazione li::before {
+      content: "📚 ";
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 60px 20px 40px 20px;
+      }
+
+      .hero button {
+        font-size: 16px;
+      }
+
+      .section h2 {
+        font-size: 20px;
+      }
+
+      .section li {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <a class="btn" href="https://wa.me/393277307616" target="_blank">Chiedi info</a>
-    <div class="scroll-indicator">Scorri verso il basso ↓</div>
-  </header>
+  <div class="hero">
+    <button onclick="window.location.href='https://wa.me/393277307616'">Chiedi info</button>
+    <div class="scroll-down">Scorri verso il basso ⬇️</div>
+  </div>
 
-  <section>
+  <div class="section">
     <h2>I nostri punti di forza</h2>
     <ul>
       <li>Ritorna in classe, raggiungi i tuoi obiettivi!</li>
       <li>Corsi personalizzati per ogni esigenza</li>
       <li>Supporto costante, docenti qualificati</li>
     </ul>
-  </section>
+  </div>
 
-  <div class="offerta">
-    <h2>🎓 Offerta Formativa</h2>
+  <div class="section formazione">
+    <h2>Offerta Formativa</h2>
     <ul>
       <li>Ragioneria</li>
       <li>Ragioneria Informatica</li>
       <li>Alberghiero</li>
-      <li>OSA (Operatore Socio-Assistenziale)</li>
-      <li>OSS (Operatore Socio Sanitario)</li>
+      <li>Turismo</li>
+      <li>Servizi per l’infanzia</li>
+      <li>Servizi sociosanitari</li>
+      <li>OSA</li>
+      <li>OSS</li>
       <li>Meccanica</li>
       <li>Meccatronica</li>
     </ul>
