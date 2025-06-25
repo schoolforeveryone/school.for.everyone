@@ -25,16 +25,24 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
-      padding: 60px 20px 100px;
+      padding: 40px 20px;
       text-align: center;
+      position: relative;
     }
 
-    h1 {
-      font-size: 36px;
+    .overlay h1 {
+      font-size: 34px;
       color: #FEE191;
       margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 30px;
+      max-width: 320px;
     }
 
     .whatsapp-button {
@@ -44,13 +52,12 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 20px;
     }
 
     .arrow {
-      font-size: 32px;
+      font-size: 28px;
       animation: bounce 1.5s infinite;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     @keyframes bounce {
@@ -77,6 +84,10 @@
       list-style: none;
       padding: 0;
     }
+
+    .indirizzi li {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
@@ -84,13 +95,14 @@
   <!-- HERO senza doppie scritte -->
   <div class="overlay">
     <h1>SCHOOL FOR EVERYONE</h1>
+    <p>Recuperi anni scolastici, corsi di formazione e tanto altro</p>
     <a class="whatsapp-button" href="https://wa.me/393277307616?text=Ciao,%20vorrei%20informazioni%20sui%20corsi" target="_blank">Chiedi info</a>
     <div class="arrow">⬇️</div>
   </div>
 
   <!-- Sezione corsi -->
   <div class="features">
-    <p>📖 Ritorna in classe, raggiungi i tuoi obiettivi!</p>
+    <p>📘 Ritorna in classe, raggiungi i tuoi obiettivi!</p>
     <p>🚀 Corsi personalizzati per ogni esigenza</p>
     <p>✅ Supporto costante, docenti qualificati</p>
     <p>🧓 Corsi OSA, OSS e formazione professionale</p>
@@ -98,7 +110,7 @@
 
   <!-- Offerta formativa -->
   <div class="indirizzi">
-    <h2>📘 Offerta Formativa</h2>
+    <h2>📚 Offerta Formativa</h2>
     <ul>
       <li>🧾 Ragioneria</li>
       <li>💻 Ragioneria Informatica</li>
