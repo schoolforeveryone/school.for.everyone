@@ -3,122 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>School for Everyone</title>
+  <title>School For Everyone</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0b1e36;
+      background-color: #0c2340;
       color: white;
+      text-align: center;
     }
 
-    header {
-      background-image: url('background.jpg'); /* Usa il tuo sfondo */
+    .hero {
+      background-image: url('https://i.imgur.com/GznF5FL.jpeg');
       background-size: cover;
       background-position: center;
-      text-align: center;
-      padding: 120px 20px 80px;
+      padding: 100px 20px 50px 20px;
     }
 
-    header h1 {
-      font-size: 36px;
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ffdd88;
+    }
+
+    .hero p {
+      font-size: 1.2em;
       margin: 0;
-      color: #fddf8f;
     }
 
-    header p {
-      font-size: 20px;
-      margin-top: 10px;
+    .info-section {
+      background-color: #0c2340;
+      padding: 40px 20px 20px;
     }
 
-    .chiedi-info {
-      background-color: #fddf8f;
-      color: #000;
-      font-weight: bold;
-      padding: 15px 30px;
-      border-radius: 30px;
-      display: inline-block;
-      margin: 20px auto;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .freccia {
-      display: block;
-      margin: 20px auto 10px;
-      width: 30px;
-      height: 30px;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
-    }
-
-    .scorri-testo {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #ddd;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    section h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #fddf8f;
-    }
-
-    ul {
+    .info-section ul {
       list-style: none;
       padding: 0;
+      font-size: 1.1em;
       text-align: left;
-      max-width: 400px;
+      max-width: 600px;
       margin: auto;
     }
 
-    li {
-      font-size: 18px;
-      margin: 10px 0;
+    .info-section ul li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .info-section ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 15px 30px;
+      background-color: #ffe188;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+    }
+
+    .scroll-indicator {
+      margin-top: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator img {
+      width: 30px;
+      height: auto;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      margin-top: 40px;
+      color: #ffe188;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="hero">
     <h1>SCHOOL FOR EVERYONE</h1>
     <p>Recuperi anni scolastici, corsi di formazione e tanto altro</p>
-    <a href="https://wa.me/393277307616" class="chiedi-info">Chiedi info</a>
-    <img src="freccia.gif" alt="Freccia verso il basso" class="freccia">
-    <div class="scorri-testo">Scorri verso il basso</div>
-  </header>
+    <a class="cta-button" href="https://wa.me/393277307616?text=Ciao%2C+vorrei+ricevere+informazioni+sui+corsi+di+School+For+Everyone.">Chiedi info</a>
+    <div class="scroll-indicator">
+      <p style="margin: 5px 0;">Scorri verso il basso</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/109/109617.png" alt="freccia giù">
+    </div>
+  </div>
 
-  <section>
-    <h2>📚 I nostri punti di forza</h2>
+  <div class="info-section">
+    <h2 class="section-title">I nostri punti di forza</h2>
     <ul>
-      <li>📖 Ritorna in classe, raggiungi i tuoi obiettivi!</li>
-      <li>🚀 Corsi personalizzati per ogni esigenza</li>
-      <li>✅ Supporto costante, docenti qualificati</li>
+      <li>Ritorna in classe, raggiungi i tuoi obiettivi!</li>
+      <li>Corsi personalizzati per ogni esigenza</li>
+      <li>Supporto costante, docenti qualificati</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>🎓 Offerta Formativa</h2>
+    <h2 class="section-title">Offerta formativa</h2>
     <ul>
-      <li>🧾 Ragioneria</li>
+      <li>📘 Ragioneria</li>
       <li>💻 Ragioneria Informatica</li>
-      <li>🍴 Alberghiero</li>
-      <li>⚙️ Meccanica</li>
-      <li>🔌 Elettronica ed Elettrotecnica</li>
-      <li>🎨 Liceo Artistico</li>
-      <li>🧑‍⚕️ Corso OSA (Operatore Socio Assistenziale)</li>
-      <li>👩‍⚕️ Corso OSS (Operatore Socio Sanitario)</li>
+      <li>🍽️ Alberghiero</li>
+      <li>🏗️ Geometra</li>
+      <li>🔧 Meccanica</li>
+      <li>🤖 Meccatronica</li>
+      <li>👨‍⚕️ OSA - Operatore Socio Assistenziale</li>
+      <li>🧑‍⚕️ OSS - Operatore Socio Sanitario</li>
     </ul>
-  </section>
+  </div>
 
 </body>
 </html>
