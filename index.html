@@ -3,117 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>School For Everyone</title>
+  <title>School for Everyone</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0c2340;
+      font-family: 'Arial', sans-serif;
+      background-color: #0d1b2a;
       color: white;
-      text-align: center;
     }
 
-    .hero {
-      background-image: url('https://i.imgur.com/GznF5FL.jpeg');
+    header {
+      background-image: url('sfondo.jpg');
       background-size: cover;
       background-position: center;
-      padding: 140px 20px 60px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
     }
 
-    .cta-button {
-      display: inline-block;
-      margin: 20px auto 10px;
-      padding: 15px 30px;
-      background-color: #ffe188;
-      color: black;
+    .btn {
+      background-color: #ffe082;
+      color: #000;
       font-weight: bold;
-      text-decoration: none;
+      padding: 15px 30px;
       border-radius: 30px;
-      font-size: 1.1em;
+      text-decoration: none;
+      margin: 20px 0;
+      display: inline-block;
     }
 
     .scroll-indicator {
-      margin-top: 10px;
+      position: absolute;
+      bottom: 20px;
+      font-size: 1.2em;
       animation: bounce 2s infinite;
-    }
-
-    .scroll-indicator img {
-      width: 28px;
-    }
-
-    .scroll-indicator-text {
-      margin: 10px 0;
-      font-size: 1em;
     }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
+      50% { transform: translateY(8px); }
     }
 
-    .info-section {
-      background-color: #0c2340;
-      padding: 40px 20px 20px;
+    section {
+      padding: 40px 20px;
+      background-color: #0d1b2a;
     }
 
-    .section-title {
-      font-size: 1.5em;
-      margin: 30px 0 15px;
-      color: #ffe188;
+    h2 {
+      color: #ffe082;
+      text-align: center;
     }
 
-    .info-section ul {
+    ul {
       list-style: none;
       padding: 0;
-      font-size: 1.1em;
-      text-align: left;
-      max-width: 600px;
-      margin: auto;
+      font-size: 1.2em;
     }
 
-    .info-section ul li {
-      margin-bottom: 15px;
-      padding-left: 25px;
-      position: relative;
+    li {
+      margin: 15px 0;
     }
 
-    .info-section ul li::before {
-      content: "✅";
-      position: absolute;
-      left: 0;
+    li::before {
+      content: "✅ ";
     }
 
+    .offerta {
+      background-color: #001427;
+      padding: 40px 20px;
+    }
+
+    .offerta h2 {
+      color: #ffe082;
+    }
+
+    .offerta ul li::before {
+      content: "📘 ";
+    }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <!-- Scritta centrale e sottotitolo RIMOSSI come richiesto -->
-    <a class="cta-button" href="https://wa.me/393277307616?text=Ciao%2C+vorrei+ricevere+informazioni+sui+corsi+di+School+For+Everyone.">Chiedi info</a>
-    <div class="scroll-indicator">
-      <p class="scroll-indicator-text">Scorri verso il basso</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/109/109617.png" alt="freccia giù">
-    </div>
-  </div>
+  <header>
+    <a class="btn" href="https://wa.me/393277307616" target="_blank">Chiedi info</a>
+    <div class="scroll-indicator">Scorri verso il basso ↓</div>
+  </header>
 
-  <div class="info-section">
-    <h2 class="section-title">I nostri punti di forza</h2>
+  <section>
+    <h2>I nostri punti di forza</h2>
     <ul>
       <li>Ritorna in classe, raggiungi i tuoi obiettivi!</li>
       <li>Corsi personalizzati per ogni esigenza</li>
       <li>Supporto costante, docenti qualificati</li>
     </ul>
+  </section>
 
-    <h2 class="section-title">Offerta formativa</h2>
+  <div class="offerta">
+    <h2>🎓 Offerta Formativa</h2>
     <ul>
-      <li>📘 Ragioneria</li>
-      <li>💻 Ragioneria Informatica</li>
-      <li>🍽️ Alberghiero</li>
-      <li>🏗️ Geometra</li>
-      <li>🔧 Meccanica</li>
-      <li>🤖 Meccatronica</li>
-      <li>👨‍⚕️ OSA - Operatore Socio Assistenziale</li>
-      <li>🧑‍⚕️ OSS - Operatore Socio Sanitario</li>
+      <li>Ragioneria</li>
+      <li>Ragioneria Informatica</li>
+      <li>Alberghiero</li>
+      <li>OSA (Operatore Socio-Assistenziale)</li>
+      <li>OSS (Operatore Socio Sanitario)</li>
+      <li>Meccanica</li>
+      <li>Meccatronica</li>
     </ul>
   </div>
 
