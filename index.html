@@ -12,37 +12,34 @@
 
     .overlay {
       background-image: url('background.jpg');
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top center;
       background-color: #000;
-      min-height: 50vh;
+      height: 60vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      position: relative;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 20px;
       text-align: center;
-      padding: 20px;
     }
 
-    .hero-text {
-      color: #fff;
-      font-size: 24px;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    a.whatsapp-button {
-      margin-top: 20px;
+    a.button {
       background-color: #FEE191;
-      color: black;
       padding: 12px 24px;
       border-radius: 30px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      color: black;
+      margin-top: 20px;
+    }
+
+    .arrow {
+      font-size: 32px;
+      color: #fff;
+      animation: bounce 1.5s infinite;
+      margin-top: 10px;
     }
 
     @keyframes bounce {
@@ -50,92 +47,63 @@
       50% { transform: translateY(10px); }
     }
 
-    .arrow {
-      font-size: 32px;
-      animation: bounce 1.5s infinite;
-      margin-top: 20px;
+    .contenuto {
+      background-color: #001f3f;
       color: white;
-    }
-
-    .main-section {
-      background-color: #0a1a2f;
-      color: white;
-      padding: 40px 20px;
-      font-size: 18px;
-    }
-
-    .main-section p {
-      margin: 12px 0;
-    }
-
-    .indirizzi, .corsi {
-      background-color: #f4f4f4;
       padding: 30px 20px;
-      font-size: 18px;
-      color: #111;
     }
 
-    .indirizzi ul, .corsi ul {
+    .contenuto h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contenuto ul {
       list-style: none;
       padding: 0;
     }
 
-    .indirizzi li, .corsi li {
-      margin: 8px 0;
+    .contenuto li {
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
-    .indirizzi strong, .corsi strong {
-      color: #222;
-    }
-
-    h2 {
+    .footer {
+      background-color: #FEE191;
       text-align: center;
-      margin-bottom: 20px;
+      padding: 20px;
+      font-weight: bold;
+      color: #000;
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO CON SFONDO -->
   <div class="overlay">
-    <div class="hero-text">
-      SCHOOL FOR EVERYONE<br>
-      Recuperi anni scolastici, corsi di formazione e tanto altro
-    </div>
-    <a class="whatsapp-button" href="https://wa.me/393277307616?text=Ciao,%20vorrei%20ricevere%20informazioni%20sulla%20scuola" target="_blank">
-      Chiedi info
-    </a>
+    <h1 style="color: #FEE191; font-size: 32px;">SCHOOL FOR EVERYONE</h1>
+    <p style="color: white; font-size: 18px;">Recuperi anni scolastici,<br>corsi di formazione e tanto altro</p>
+    <a href="https://wa.me/393277307616?text=Ciao,%20vorrei%20maggiori%20info" target="_blank" class="button">Chiedi info</a>
     <div class="arrow">⬇️</div>
+    <p style="color: white;">Scorri in basso</p>
   </div>
 
-  <!-- SEZIONE INFO -->
-  <div class="main-section">
-    <p>📖 Ritorna in classe, raggiungi i tuoi obiettivi!</p>
-    <p>🚀 Corsi personalizzati per ogni esigenza</p>
-    <p>✅ Supporto costante, docenti qualificati</p>
-  </div>
-
-  <!-- SEZIONE INDIRIZZI -->
-  <div class="indirizzi">
-    <h2>I nostri indirizzi di studio</h2>
+  <div class="contenuto">
+    <h2>📘 Offerta Formativa</h2>
     <ul>
-      <li>📘 <strong>Ragioneria</strong></li>
-      <li>💻 <strong>Ragioneria Informatica</strong></li>
-      <li>🍽️ <strong>Alberghiero</strong></li>
-      <li>🎨 <strong>Liceo Artistico</strong></li>
-      <li>⚙️ <strong>Meccanica</strong></li>
-      <li>🤖 <strong>Meccatronica</strong></li>
-      <li>📐 <strong>Geometra</strong></li>
+      <li>🧾 Ragioneria</li>
+      <li>💻 Ragioneria Informatica</li>
+      <li>🍽️ Alberghiero</li>
+      <li>🎨 Liceo Artistico</li>
+      <li>⚙️ Meccanica</li>
+      <li>🤖 Meccatronica</li>
+      <li>📐 Geometra</li>
+      <li>👩‍⚕️ Corso OSA</li>
+      <li>🩺 Corso OSS</li>
     </ul>
   </div>
 
-  <!-- SEZIONE CORSI -->
-  <div class="corsi">
-    <h2>I nostri corsi di formazione</h2>
-    <ul>
-      <li>👩‍⚕️ <strong>Corso OSA</strong></li>
-      <li>🧑‍⚕️ <strong>Corso OSS</strong></li>
-    </ul>
+  <div class="footer">
+    Chiedi info
   </div>
 
 </body>
