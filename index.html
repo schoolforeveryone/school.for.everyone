@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>School for Everyone</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #001933;
       color: white;
@@ -19,30 +14,27 @@
 
     .overlay {
       background-image: url('background.jpg');
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-      padding: 40px 20px;
+      padding: 60px 20px 40px;
       text-align: center;
-      position: relative;
     }
 
-    .overlay h1 {
-      font-size: 34px;
+    h1 {
+      font-size: 32px;
       color: #FEE191;
       margin-bottom: 10px;
     }
 
-    .overlay p {
-      font-size: 18px;
-      color: white;
-      margin-bottom: 30px;
-      max-width: 320px;
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
     }
 
     .whatsapp-button {
@@ -52,12 +44,15 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      margin-bottom: 20px;
+      display: inline-block;
     }
 
     .arrow {
       font-size: 28px;
       animation: bounce 1.5s infinite;
-      margin-top: 25px;
+      color: white;
+      margin-bottom: 20px;
     }
 
     @keyframes bounce {
@@ -65,34 +60,34 @@
       50% { transform: translateY(10px); }
     }
 
-    .features, .indirizzi {
-      background-color: #002244;
+    section {
+      background-color: #00264d;
       padding: 40px 20px;
+      text-align: center;
     }
 
-    .features p, .indirizzi li {
-      font-size: 18px;
-      margin-bottom: 16px;
-    }
-
-    .indirizzi h2 {
+    section h2 {
       font-size: 24px;
       margin-bottom: 20px;
+      color: #FEE191;
     }
 
-    .indirizzi ul {
+    ul {
       list-style: none;
       padding: 0;
+      font-size: 18px;
+      text-align: left;
+      max-width: 400px;
+      margin: auto;
     }
 
-    .indirizzi li {
-      margin-bottom: 10px;
+    li {
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO senza doppie scritte -->
   <div class="overlay">
     <h1>SCHOOL FOR EVERYONE</h1>
     <p>Recuperi anni scolastici, corsi di formazione e tanto altro</p>
@@ -100,19 +95,10 @@
     <div class="arrow">⬇️</div>
   </div>
 
-  <!-- Sezione corsi -->
-  <div class="features">
-    <p>📘 Ritorna in classe, raggiungi i tuoi obiettivi!</p>
-    <p>🚀 Corsi personalizzati per ogni esigenza</p>
-    <p>✅ Supporto costante, docenti qualificati</p>
-    <p>🧓 Corsi OSA, OSS e formazione professionale</p>
-  </div>
-
-  <!-- Offerta formativa -->
-  <div class="indirizzi">
-    <h2>📚 Offerta Formativa</h2>
+  <section>
+    <h2>📘 Offerta Formativa</h2>
     <ul>
-      <li>🧾 Ragioneria</li>
+      <li>📄 Ragioneria</li>
       <li>💻 Ragioneria Informatica</li>
       <li>🍽️ Alberghiero</li>
       <li>🎨 Liceo Artistico</li>
@@ -120,7 +106,15 @@
       <li>🤖 Meccatronica</li>
       <li>📐 Geometra</li>
     </ul>
-  </div>
+  </section>
+
+  <section>
+    <h2>📚 Corsi di Formazione</h2>
+    <ul>
+      <li>👩‍⚕️ Corso OSA</li>
+      <li>🧑‍⚕️ Corso OSS</li>
+    </ul>
+  </section>
 
 </body>
 </html>
