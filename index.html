@@ -17,23 +17,49 @@
       background-image: url('https://i.imgur.com/GznF5FL.jpeg');
       background-size: cover;
       background-position: center;
-      padding: 100px 20px 50px 20px;
+      padding: 140px 20px 60px 20px;
     }
 
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #ffdd88;
+    .cta-button {
+      display: inline-block;
+      margin: 20px auto 10px;
+      padding: 15px 30px;
+      background-color: #ffe188;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1em;
     }
 
-    .hero p {
-      font-size: 1.2em;
-      margin: 0;
+    .scroll-indicator {
+      margin-top: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator img {
+      width: 28px;
+    }
+
+    .scroll-indicator-text {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
     }
 
     .info-section {
       background-color: #0c2340;
       padding: 40px 20px 20px;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      margin: 30px 0 15px;
+      color: #ffe188;
     }
 
     .info-section ul {
@@ -52,57 +78,20 @@
     }
 
     .info-section ul li::before {
-      content: "✔️";
+      content: "✅";
       position: absolute;
       left: 0;
     }
 
-    .cta-button {
-      display: inline-block;
-      margin: 20px auto;
-      padding: 15px 30px;
-      background-color: #ffe188;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 1.2em;
-    }
-
-    .scroll-indicator {
-      margin-top: 20px;
-      animation: bounce 2s infinite;
-    }
-
-    .scroll-indicator img {
-      width: 30px;
-      height: auto;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(10px);
-      }
-    }
-
-    .section-title {
-      font-size: 1.5em;
-      margin-top: 40px;
-      color: #ffe188;
-    }
   </style>
 </head>
 <body>
 
   <div class="hero">
-    <h1>SCHOOL FOR EVERYONE</h1>
-    <p>Recuperi anni scolastici, corsi di formazione e tanto altro</p>
+    <!-- Scritta centrale e sottotitolo RIMOSSI come richiesto -->
     <a class="cta-button" href="https://wa.me/393277307616?text=Ciao%2C+vorrei+ricevere+informazioni+sui+corsi+di+School+For+Everyone.">Chiedi info</a>
     <div class="scroll-indicator">
-      <p style="margin: 5px 0;">Scorri verso il basso</p>
+      <p class="scroll-indicator-text">Scorri verso il basso</p>
       <img src="https://cdn-icons-png.flaticon.com/512/109/109617.png" alt="freccia giù">
     </div>
   </div>
