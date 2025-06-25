@@ -10,15 +10,21 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(10px); }
     }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
   </style>
 </head>
-<body style="margin: 0; font-family: Arial, sans-serif;">
+<body>
 
-  <!-- Sezione con sfondo -->
-  <div class="overlay" style="background-image: url('background.jpg'); background-size: cover; background-position: center; min-height: 100vh; color: white; display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column; padding: 20px;">
+  <!-- HERO con sfondo -->
+  <div class="overlay"
+       style="background-image: url('background.jpg'); background-size: cover; background-position: center; min-height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column; padding: 20px;">
 
-    <!-- ✅ Abbiamo rimosso la scritta duplicata per evitare sovrapposizioni -->
+    <!-- ✅ SCRITTE RIMOSSE per evitare sovrapposizione -->
 
+    <!-- Pulsante WhatsApp -->
     <a href="https://wa.me/393277307616?text=Ciao,%20vorrei%20ricevere%20informazioni%20sulla%20scuola"
        target="_blank"
        style="margin-top: 20px; background-color: #FEE191; color: #111; padding: 12px 24px; font-size: 18px; border-radius: 30px; text-decoration: none; font-weight: bold;">
@@ -32,7 +38,7 @@
     </div>
   </div>
 
-  <!-- Sezione Indirizzi scolastici -->
+  <!-- Sezione indirizzi scolastici -->
   <section id="indirizzi" style="padding: 40px; background-color: #f8f9fa;">
     <h2 style="text-align: center; font-size: 28px; margin-bottom: 20px; color: #111;">🎓 I nostri indirizzi di studio</h2>
     <ul style="list-style: none; padding: 0; font-size: 18px; max-width: 600px; margin: auto; color: #1a237e;">
