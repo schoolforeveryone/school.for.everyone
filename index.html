@@ -8,51 +8,47 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #001933;
+      background-color: #0b1e36;
       color: white;
     }
 
-    .overlay {
-      background-image: url('background.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center top;
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 40px 20px 20px;
+    header {
+      background-image: url('background.jpg'); /* Usa il tuo sfondo */
+      background-size: cover;
+      background-position: center;
       text-align: center;
+      padding: 120px 20px 80px;
     }
 
-    h1 {
-      font-size: 32px;
-      color: #FEE191;
-      margin-bottom: 10px;
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #fddf8f;
     }
 
-    p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .whatsapp-button {
-      background-color: #FEE191;
-      color: black;
-      padding: 12px 24px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 10px 0;
-      display: inline-block;
-    }
-
-    .arrow {
-      font-size: 28px;
-      animation: bounce 1.5s infinite;
-      color: white;
+    header p {
+      font-size: 20px;
       margin-top: 10px;
+    }
+
+    .chiedi-info {
+      background-color: #fddf8f;
+      color: #000;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 30px;
+      display: inline-block;
+      margin: 20px auto;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .freccia {
+      display: block;
+      margin: 20px auto 10px;
+      width: 30px;
+      height: 30px;
+      animation: bounce 2s infinite;
     }
 
     @keyframes bounce {
@@ -60,8 +56,13 @@
       50% { transform: translateY(10px); }
     }
 
+    .scorri-testo {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
     section {
-      background-color: #00264d;
       padding: 40px 20px;
       text-align: center;
     }
@@ -69,50 +70,53 @@
     section h2 {
       font-size: 24px;
       margin-bottom: 20px;
-      color: #FEE191;
+      color: #fddf8f;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      font-size: 18px;
       text-align: left;
       max-width: 400px;
       margin: auto;
     }
 
     li {
+      font-size: 18px;
       margin: 10px 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="overlay">
+  <header>
     <h1>SCHOOL FOR EVERYONE</h1>
     <p>Recuperi anni scolastici, corsi di formazione e tanto altro</p>
-    <a class="whatsapp-button" href="https://wa.me/393277307616?text=Ciao,%20vorrei%20informazioni%20sui%20corsi" target="_blank">Chiedi info</a>
-    <div class="arrow">⬇️</div>
-  </div>
+    <a href="https://wa.me/393277307616" class="chiedi-info">Chiedi info</a>
+    <img src="freccia.gif" alt="Freccia verso il basso" class="freccia">
+    <div class="scorri-testo">Scorri verso il basso</div>
+  </header>
 
   <section>
-    <h2>📘 Offerta Formativa</h2>
+    <h2>📚 I nostri punti di forza</h2>
     <ul>
-      <li>📄 Ragioneria</li>
-      <li>💻 Ragioneria Informatica</li>
-      <li>🍽️ Alberghiero</li>
-      <li>🎨 Liceo Artistico</li>
-      <li>⚙️ Meccanica</li>
-      <li>🤖 Meccatronica</li>
-      <li>📐 Geometra</li>
+      <li>📖 Ritorna in classe, raggiungi i tuoi obiettivi!</li>
+      <li>🚀 Corsi personalizzati per ogni esigenza</li>
+      <li>✅ Supporto costante, docenti qualificati</li>
     </ul>
   </section>
 
   <section>
-    <h2>📚 Corsi di Formazione</h2>
+    <h2>🎓 Offerta Formativa</h2>
     <ul>
-      <li>👩‍⚕️ Corso OSA</li>
-      <li>🧑‍⚕️ Corso OSS</li>
+      <li>🧾 Ragioneria</li>
+      <li>💻 Ragioneria Informatica</li>
+      <li>🍴 Alberghiero</li>
+      <li>⚙️ Meccanica</li>
+      <li>🔌 Elettronica ed Elettrotecnica</li>
+      <li>🎨 Liceo Artistico</li>
+      <li>🧑‍⚕️ Corso OSA (Operatore Socio Assistenziale)</li>
+      <li>👩‍⚕️ Corso OSS (Operatore Socio Sanitario)</li>
     </ul>
   </section>
 
