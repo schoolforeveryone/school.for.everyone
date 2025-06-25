@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>School for Everyone</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
+      background-color: #002244;
+      color: white;
     }
 
     .overlay {
       background-image: url('background.jpg');
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
-      background-position: top center;
-      background-color: #000;
-      height: 60vh;
+      background-position: center;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: flex-end;
-      padding-bottom: 20px;
+      align-items: center;
+      padding: 60px 20px 80px 20px;
       text-align: center;
     }
 
-    a.button {
+    h1 {
+      font-size: 36px;
+      color: #FEE191;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-button {
       background-color: #FEE191;
+      color: black;
       padding: 12px 24px;
       border-radius: 30px;
-      font-weight: bold;
       text-decoration: none;
-      color: black;
-      margin-top: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .arrow {
       font-size: 32px;
-      color: #fff;
       animation: bounce 1.5s infinite;
-      margin-top: 10px;
     }
 
     @keyframes bounce {
@@ -47,63 +63,38 @@
       50% { transform: translateY(10px); }
     }
 
-    .contenuto {
-      background-color: #001f3f;
-      color: white;
-      padding: 30px 20px;
+    .features {
+      background-color: #001933;
+      padding: 40px 20px;
     }
 
-    .contenuto h2 {
-      text-align: center;
+    .features p {
       margin-bottom: 20px;
-    }
-
-    .contenuto ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .contenuto li {
       font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      background-color: #FEE191;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
-      color: #000;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
 
+  <!-- Sezione immagine e titolo -->
   <div class="overlay">
-    <h1 style="color: #FEE191; font-size: 32px;">SCHOOL FOR EVERYONE</h1>
-    <p style="color: white; font-size: 18px;">Recuperi anni scolastici,<br>corsi di formazione e tanto altro</p>
-    <a href="https://wa.me/393277307616?text=Ciao,%20vorrei%20maggiori%20info" target="_blank" class="button">Chiedi info</a>
+    <h1>SCHOOL FOR EVERYONE</h1>
+    <p class="subheading">Recuperi anni scolastici, corsi di formazione e tanto altro</p>
+
+    <!-- Pulsante WhatsApp -->
+    <a class="whatsapp-button" href="https://wa.me/393277307616?text=Ciao,%20vorrei%20informazioni%20sui%20corsi" target="_blank">Chiedi info</a>
+
+    <!-- Freccia -->
     <div class="arrow">⬇️</div>
-    <p style="color: white;">Scorri in basso</p>
   </div>
 
-  <div class="contenuto">
-    <h2>📘 Offerta Formativa</h2>
-    <ul>
-      <li>🧾 Ragioneria</li>
-      <li>💻 Ragioneria Informatica</li>
-      <li>🍽️ Alberghiero</li>
-      <li>🎨 Liceo Artistico</li>
-      <li>⚙️ Meccanica</li>
-      <li>🤖 Meccatronica</li>
-      <li>📐 Geometra</li>
-      <li>👩‍⚕️ Corso OSA</li>
-      <li>🩺 Corso OSS</li>
-    </ul>
-  </div>
-
-  <div class="footer">
-    Chiedi info
+  <!-- Sezione corsi -->
+  <div class="features">
+    <p>📖 Ritorna in classe, raggiungi i tuoi obiettivi!</p>
+    <p>🚀 Corsi personalizzati per ogni esigenza</p>
+    <p>✅ Supporto costante, docenti qualificati</p>
+    <p>🧓 Corsi OSA, OSS e formazione professionale</p>
   </div>
 
 </body>
