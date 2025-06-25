@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>School for Everyone</title>
   <style>
     * {
@@ -13,7 +13,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #002244;
+      background-color: #001933;
       color: white;
     }
 
@@ -27,7 +27,7 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-      padding: 60px 20px 80px 20px;
+      padding: 60px 20px 100px;
       text-align: center;
     }
 
@@ -37,12 +37,6 @@
       margin-bottom: 10px;
     }
 
-    .subheading {
-      font-size: 18px;
-      color: white;
-      margin-bottom: 20px;
-    }
-
     .whatsapp-button {
       background-color: #FEE191;
       color: black;
@@ -50,12 +44,13 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     .arrow {
       font-size: 32px;
       animation: bounce 1.5s infinite;
+      margin-top: 20px;
     }
 
     @keyframes bounce {
@@ -63,29 +58,33 @@
       50% { transform: translateY(10px); }
     }
 
-    .features {
-      background-color: #001933;
+    .features, .indirizzi {
+      background-color: #002244;
       padding: 40px 20px;
     }
 
-    .features p {
-      margin-bottom: 20px;
+    .features p, .indirizzi li {
       font-size: 18px;
-      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .indirizzi h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .indirizzi ul {
+      list-style: none;
+      padding: 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Sezione immagine e titolo -->
+  <!-- HERO senza doppie scritte -->
   <div class="overlay">
     <h1>SCHOOL FOR EVERYONE</h1>
-    <p class="subheading">Recuperi anni scolastici, corsi di formazione e tanto altro</p>
-
-    <!-- Pulsante WhatsApp -->
     <a class="whatsapp-button" href="https://wa.me/393277307616?text=Ciao,%20vorrei%20informazioni%20sui%20corsi" target="_blank">Chiedi info</a>
-
-    <!-- Freccia -->
     <div class="arrow">⬇️</div>
   </div>
 
@@ -95,6 +94,20 @@
     <p>🚀 Corsi personalizzati per ogni esigenza</p>
     <p>✅ Supporto costante, docenti qualificati</p>
     <p>🧓 Corsi OSA, OSS e formazione professionale</p>
+  </div>
+
+  <!-- Offerta formativa -->
+  <div class="indirizzi">
+    <h2>📘 Offerta Formativa</h2>
+    <ul>
+      <li>🧾 Ragioneria</li>
+      <li>💻 Ragioneria Informatica</li>
+      <li>🍽️ Alberghiero</li>
+      <li>🎨 Liceo Artistico</li>
+      <li>⚙️ Meccanica</li>
+      <li>🤖 Meccatronica</li>
+      <li>📐 Geometra</li>
+    </ul>
   </div>
 
 </body>
