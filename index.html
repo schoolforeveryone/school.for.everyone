@@ -7,126 +7,131 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      color: white;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background-color: #0a1d3a;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5em 1em 0.5em;
+      font-size: 2em;
+      font-weight: bold;
+      background-color: #0a1d3a;
+      color: #ffeb8a;
     }
 
     .hero {
-      background: url('background.jpg') no-repeat center center;
+      background: url('https://raw.githubusercontent.com/ryone/github/main/sfondo-aula.jpg') no-repeat center center;
       background-size: cover;
+      padding: 6em 1em 2em;
       text-align: center;
-      padding: 100px 20px 60px 20px;
-      position: relative;
     }
 
-    .hero button {
-      background-color: #ffe082;
+    .cta-button {
+      background-color: #ffe28a;
+      color: #000;
       border: none;
-      border-radius: 20px;
-      padding: 15px 30px;
-      font-size: 18px;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border-radius: 1em;
       font-weight: bold;
-      color: #222;
       cursor: pointer;
-      margin-top: 20px;
+      margin: 1em auto;
+      display: inline-block;
+      text-decoration: none;
     }
 
     .scroll-down {
-      font-size: 18px;
-      margin-top: 40px;
-      animation: bounce 1.5s infinite;
+      text-align: center;
+      margin-top: 1em;
+      font-size: 1.2em;
+    }
+
+    .arrow {
+      font-size: 2em;
+      animation: bounce 2s infinite;
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(8px);
+      }
     }
 
-    .section {
-      background-color: #002144;
-      padding: 40px 20px;
-      text-align: left;
+    section {
+      padding: 2em 1em;
     }
 
-    .section h2 {
-      color: #ffe082;
-      font-size: 24px;
-      margin-bottom: 20px;
+    h2 {
+      text-align: center;
+      color: #ffeb8a;
     }
 
-    .section ul {
+    ul {
       list-style: none;
-      padding: 0;
+      padding-left: 1.2em;
     }
 
-    .section li {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .section li::before {
+    ul li::before {
       content: "✅ ";
-      margin-right: 8px;
+      margin-right: 0.3em;
     }
 
-    .formazione h2::before {
-      content: "📘 ";
-    }
-
-    .formazione li::before {
-      content: "📚 ";
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        padding: 60px 20px 40px 20px;
-      }
-
-      .hero button {
-        font-size: 16px;
-      }
-
-      .section h2 {
-        font-size: 20px;
-      }
-
-      .section li {
-        font-size: 16px;
-      }
+    .contatti {
+      background-color: #001830;
+      text-align: center;
+      padding: 2em 1em;
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <button onclick="window.location.href='https://wa.me/393277307616'">Chiedi info</button>
-    <div class="scroll-down">Scorri verso il basso ⬇️</div>
-  </div>
+<header>SCHOOL FOR EVERYONE</header>
 
-  <div class="section">
-    <h2>I nostri punti di forza</h2>
-    <ul>
-      <li>Ritorna in classe, raggiungi i tuoi obiettivi!</li>
-      <li>Corsi personalizzati per ogni esigenza</li>
-      <li>Supporto costante, docenti qualificati</li>
-    </ul>
+<div class="hero">
+  <a class="cta-button" href="https://wa.me/393277307616" target="_blank">Chiedi info</a>
+  <div class="scroll-down">
+    Scorri verso il basso<br>
+    <div class="arrow">↓</div>
   </div>
+</div>
 
-  <div class="section formazione">
-    <h2>Offerta Formativa</h2>
-    <ul>
-      <li>Ragioneria</li>
-      <li>Ragioneria Informatica</li>
-      <li>Alberghiero</li>
-      <li>Turismo</li>
-      <li>Servizi per l’infanzia</li>
-      <li>Servizi sociosanitari</li>
-      <li>OSA</li>
-      <li>OSS</li>
-      <li>Meccanica</li>
-      <li>Meccatronica</li>
-    </ul>
-  </div>
+<section>
+  <h2>I nostri punti di forza</h2>
+  <ul>
+    <li>Ritorna in classe, raggiungi i tuoi obiettivi!</li>
+    <li>Corsi personalizzati per ogni esigenza</li>
+    <li>Supporto costante, docenti qualificati</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📚 Offerta Formativa</h2>
+  <ul>
+    <li>Ragioneria</li>
+    <li>Ragioneria Informatica</li>
+    <li>Alberghiero</li>
+    <li>Liceo Scientifico</li>
+    <li>Liceo Scienze Umane</li>
+    <li>Costruzioni Ambiente e Territorio (Geometra)</li>
+    <li>Elettronica ed Elettrotecnica</li>
+    <li>Meccanica e Meccatronica</li>
+  </ul>
+  <h2>🧑‍⚕️ Corsi Professionali</h2>
+  <ul>
+    <li>OSA - Operatore Socio Assistenziale</li>
+    <li>OSS - Operatore Socio Sanitario</li>
+  </ul>
+</section>
+
+<div class="contatti">
+  <p>📍 Caserta (CE)</p>
+  <p>📱 WhatsApp: <a href="https://wa.me/393277307616" style="color: #ffe28a;">+39 327 730 7616</a></p>
+</div>
 
 </body>
 </html>
