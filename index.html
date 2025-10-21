@@ -8,13 +8,15 @@
   <style>
     body{
       margin:0;
-      font-family:Arial,sans-serif;
+      font-family:"Poppins",Arial,sans-serif;
       color:#fff;
       background-color:#0a1d3a;
     }
+
     header{text-align:center;padding:30px 12px 0}
     header img{width:150px;max-width:80%;border-radius:12px}
 
+    /* HERO */
     .hero{
       background:url('https://raw.githubusercontent.com/ryone/github/main/sfondo-aula.jpg') no-repeat center center;
       background-size:cover;
@@ -33,7 +35,10 @@
       margin:1em auto;
       display:inline-block;
       text-decoration:none;
+      box-shadow:0 3px 12px rgba(0,0,0,0.4);
+      transition:transform .2s;
     }
+    .cta-button:hover{transform:scale(1.05)}
     .scroll-down{text-align:center;margin-top:.3em;font-size:1.2em}
     .arrow{font-size:2em;animation:bounce 2s infinite}
     @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
@@ -41,21 +46,67 @@
     section{padding:2em 1em}
     h2{text-align:center;color:#ffeb8a}
 
-    /* Blocchi cliccabili */
+    /* --- CHI SIAMO --- */
+    .about{
+      padding:60px 20px;
+      background:linear-gradient(135deg,#0a1d3a 0%,#142b57 100%);
+    }
+    .about__card{
+      max-width:1000px;margin:0 auto;text-align:left;
+      background:rgba(255,255,255,0.05);
+      border-radius:20px;
+      padding:40px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      backdrop-filter:blur(6px);
+    }
+    .about__icon{
+      width:60px;height:60px;border-radius:50%;
+      background:rgba(255,235,138,.15);
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:20px;
+      animation:shine 3s infinite;
+    }
+    @keyframes shine{0%,100%{box-shadow:0 0 15px rgba(255,235,138,.4)}50%{box-shadow:0 0 30px rgba(255,235,138,.8)}}
+    .about__title{
+      color:#ffeb8a;font-size:30px;margin-bottom:14px;text-align:center;
+    }
+    .about__text{
+      font-size:18px;line-height:1.7;
+      color:#f5f7ff;text-align:center;max-width:800px;margin:0 auto 25px;
+    }
+    .about__points{
+      display:flex;flex-wrap:wrap;justify-content:center;gap:12px;
+    }
+    .about__point{
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:10px;
+      padding:10px 16px;
+      color:#fff;font-weight:600;
+      transition:background .2s;
+    }
+    .about__point:hover{background:rgba(255,255,255,0.25)}
+    .about__cta{
+      display:block;width:max-content;margin:30px auto 0;
+      background:#ffe28a;color:#000;font-weight:700;
+      padding:14px 28px;border-radius:12px;text-decoration:none;
+      transition:transform .2s;
+    }
+    .about__cta:hover{transform:scale(1.05)}
+
+    /* --- ACCORDION BLOCCO --- */
     .acc{border:1px solid #e7e7e7;border-radius:14px;background:#fff;margin:18px auto;overflow:hidden;max-width:1000px;color:#111}
-    .acc__btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border:0;background:#fff;cursor:pointer;font:700 1.1rem/1.2 Arial,system-ui;color:#111}
+    .acc__btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border:0;background:#fff;cursor:pointer;font:700 1.1rem/1.2 "Poppins",system-ui;color:#111}
     .acc__icon{transition:transform .25s ease}
     details[open] .acc__icon{transform:rotate(180deg)}
     .acc__panel{padding:0 20px 20px}
-
     .grid{display:grid;gap:14px}
     @media (min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media (min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
-
     .card{border:1px solid #ececec;border-radius:12px;background:#fff;color:#111;padding:14px;transition:transform .15s ease,box-shadow .15s ease}
     .card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
     .card a{display:block;text-decoration:none;color:inherit}
-    .card__title{font:600 1rem/1.25 Arial,system-ui;color:#0b3d91;margin:2px 0}
+    .card__title{font:600 1rem/1.25 "Poppins",system-ui;color:#0b3d91;margin:2px 0}
 
     .contatti{background-color:#001830;text-align:center;padding:2em 1em}
     .contatti a{color:#ffe28a}
@@ -68,30 +119,42 @@
 </header>
 
 <!-- CHI SIAMO -->
-<div style="text-align:center;margin:30px auto;">
-  <h2 style="color:#ffeb8a;font-size:24px;margin-bottom:10px;">Chi siamo</h2>
-  <p style="font-size:18px;color:white;max-width:600px;margin:0 auto;">
-    Siamo broker nel settore dell’istruzione e della formazione, specializzati da anni nel recupero anni scolastici e nell’organizzazione di corsi professionali.
-  </p>
-</div>
+<section class="about" id="chi-siamo">
+  <div class="about__card">
+    <div class="about__icon">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3l9 4.5-9 4.5L3 7.5 12 3Z" stroke="#ffeb8a" stroke-width="1.6" />
+        <path d="M6 10.2v4.3c0 .8 2.9 2.5 6 2.5s6-1.7 6-2.5v-4.3" stroke="#ffeb8a" stroke-width="1.6"/>
+      </svg>
+    </div>
+    <h2 class="about__title">Chi siamo</h2>
+    <p class="about__text">
+      <strong>School for Everyone</strong> è una realtà che opera da anni nel settore della formazione e del recupero anni scolastici.  
+      Offriamo percorsi su misura per studenti, lavoratori e docenti, con soluzioni flessibili in presenza e online.  
+      La nostra missione è rendere l’istruzione accessibile, moderna e orientata al futuro.
+    </p>
 
-<div class="hero">
-  <a class="cta-button" href="https://wa.me/393762697550?text=Ciao%2C+vorrei+ricevere+informazioni+sui+corsi+di+School+for+Everyone." target="_blank">Chiedi info</a>
-  <div class="scroll-down">
-    Scorri verso il basso<br><div class="arrow">↓</div>
+    <div class="about__points">
+      <div class="about__point">Recupero anni scolastici</div>
+      <div class="about__point">Corsi OSA / OSS / OPI</div>
+      <div class="about__point">Certificazioni linguistiche</div>
+      <div class="about__point">EIPASS, LIM, Tablet, Coding</div>
+      <div class="about__point">Docenti qualificati</div>
+      <div class="about__point">Assistenza personalizzata</div>
+    </div>
+
+    <a class="about__cta" href="https://wa.me/393762697550?text=Ciao%2C+vorrei+ricevere+informazioni+sui+corsi+di+School+for+Everyone." target="_blank">
+      📲 Chiedi info su WhatsApp
+    </a>
   </div>
-</div>
-
-<section>
-  <h2>I nostri punti di forza</h2>
-  <ul style="list-style:none;padding-left:1.2em">
-    <li>Ritorna in classe, raggiungi i tuoi obiettivi!</li>
-    <li>Corsi personalizzati per ogni esigenza</li>
-    <li>Supporto costante, docenti qualificati</li>
-  </ul>
 </section>
 
-<!-- ====== OFFERTA FORMATIVA ====== -->
+<!-- HERO -->
+<div class="hero">
+  <div class="scroll-down">Scorri verso il basso<br><div class="arrow">↓</div></div>
+</div>
+
+<!-- OFFERTA FORMATIVA -->
 <section id="offerta">
   <h2>📚 Offerta Formativa</h2>
 
@@ -99,20 +162,19 @@
   <details class="acc">
     <summary class="acc__btn">
       <span>I nostri indirizzi</span>
-      <svg class="acc__icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <svg class="acc__icon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </summary>
     <div class="acc__panel">
       <div class="grid">
-        <div class="card"><a href="#ragioneria"><div class="card__title">Ragioneria</div></a></div>
-        <div class="card"><a href="#ragioneria-informatica"><div class="card__title">Ragioneria Informatica</div></a></div>
-        <div class="card"><a href="#alberghiero"><div class="card__title">Alberghiero</div></a></div>
-        <div class="card"><a href="#liceo-scientifico"><div class="card__title">Liceo Scientifico</div></a></div>
-        <div class="card"><a href="#liceo-scienze-umane"><div class="card__title">Liceo Scienze Umane</div></a></div>
-        <div class="card"><a href="#cat-geometra"><div class="card__title">Costruzioni Ambiente e Territorio (Geometra)</div></a></div>
-        <div class="card"><a href="#elettronica-elettrotecnica"><div class="card__title">Elettronica ed Elettrotecnica</div></a></div>
-        <div class="card"><a href="#meccanica-meccatronica"><div class="card__title">Meccanica e Meccatronica</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Ragioneria</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Ragioneria Informatica</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Alberghiero</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Liceo Scientifico</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Liceo Scienze Umane</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Costruzioni, Ambiente e Territorio (Geometra)</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Perito Agrario</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Elettronica ed Elettrotecnica</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Meccanica e Meccatronica</div></a></div>
       </div>
     </div>
   </details>
@@ -121,15 +183,13 @@
   <details class="acc">
     <summary class="acc__btn">
       <span>Corsi Professionali</span>
-      <svg class="acc__icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <svg class="acc__icon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </summary>
     <div class="acc__panel">
       <div class="grid">
-        <div class="card"><a href="#osa"><div class="card__title">OSA - Operatore Socio Assistenziale</div></a></div>
-        <div class="card"><a href="#oss"><div class="card__title">OSS - Operatore Socio Sanitario</div></a></div>
-        <div class="card"><a href="#opi"><div class="card__title">OPI - Operatore dell’Infanzia</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">OSA - Operatore Socio Assistenziale</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">OSS - Operatore Socio Sanitario</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">OPI - Operatore dell’Infanzia</div></a></div>
       </div>
     </div>
   </details>
@@ -138,64 +198,22 @@
   <details class="acc">
     <summary class="acc__btn">
       <span>Certificazioni e Competenze Digitali</span>
-      <svg class="acc__icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <svg class="acc__icon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </summary>
     <div class="acc__panel">
       <div class="grid">
-        <div class="card"><a href="#inglese"><div class="card__title">Inglese B1 - B2 - C1 - C2</div></a></div>
-        <div class="card"><a href="#spagnolo"><div class="card__title">Spagnolo A2 - B1 - B2 - C1</div></a></div>
-        <div class="card"><a href="#clil"><div class="card__title">CLIL - Content and Language Integrated Learning</div></a></div>
-        <div class="card"><a href="#eipass-user"><div class="card__title">EIPASS User</div></a></div>
-        <div class="card"><a href="#eipass-standard"><div class="card__title">EIPASS Standard</div></a></div>
-        <div class="card"><a href="#lim"><div class="card__title">LIM - Lavagna Interattiva Multimediale</div></a></div>
-        <div class="card"><a href="#tablet"><div class="card__title">Tablet per la Didattica Digitale</div></a></div>
-        <div class="card"><a href="#coding"><div class="card__title">Coding - Programmazione e Pensiero Computazionale</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Inglese B1 - B2 - C1 - C2</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Spagnolo A2 - B1 - B2 - C1</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">CLIL - Content and Language Integrated Learning</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">EIPASS User</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">EIPASS Standard</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">LIM - Lavagna Interattiva Multimediale</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Tablet per la Didattica Digitale</div></a></div>
+        <div class="card"><a href="#"><div class="card__title">Coding - Programmazione e Pensiero Computazionale</div></a></div>
       </div>
     </div>
   </details>
 </section>
-<!-- ====== /OFFERTA FORMATIVA ====== -->
-
-<!-- RECENSIONI -->
-<section id="recensioni-studenti" style="background:#001f3f;padding:40px 20px;text-align:center;color:#ffffff;">
-  <h2 style="font-size:28px;margin-bottom:20px;color:#ffd700;">Le opinioni dei nostri studenti</h2>
-  <p style="font-size:18px;max-width:600px;margin:0 auto 30px;">
-    Vuoi condividere la tua esperienza? Valuta da 1 a 5 stelle e lascia un commento!
-  </p>
-  <div onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSda6H7M6qReR89dgTuBnLDpbKMFsOcEPXRy2wyUem98Y6LoKQ/viewform?usp=header','_blank')" 
-       style="padding:14px 28px;font-size:18px;border-radius:10px;background-color:#28a745;color:white;border:none;cursor:pointer;text-align:center;max-width:300px;margin:20px auto;">
-    ✍️ Lascia una recensione
-  </div>
-  <div id="lista-recensioni" style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:40px;"></div>
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.4/tabletop.min.js"></script>
-<script>
-  function init(){
-    Tabletop.init({
-      key:"https://docs.google.com/spreadsheets/d/1xKNfTFjv9q7T0_wmrgkG3lqtRWOpvJhVg4tkFtI8UO8/pubhtml",
-      simpleSheet:true,
-      callback:mostraRecensioni
-    });
-  }
-  function mostraRecensioni(data){
-    var c=document.getElementById("lista-recensioni");
-    c.innerHTML="";
-    data.reverse().slice(0,5).forEach(r=>{
-      var stelle=parseInt(r.Stelle);
-      var stars='★'.repeat(stelle)+'☆'.repeat(5-stelle);
-      c.innerHTML+=`
-        <div style="background:#003366;color:#fff;padding:20px;border-radius:10px;max-width:300px;box-shadow:0 0 10px rgba(0,0,0,.4);">
-          <p style="font-size:18px;color:#ffd700;margin-bottom:10px;">${stars}</p>
-          <p style="font-style:italic;margin-bottom:10px;">“${r.Commento}”</p>
-          <p style="font-size:14px;color:#cccccc;">– ${r.Nome || 'Studente'}</p>
-        </div>`;
-    });
-  }
-  window.addEventListener("DOMContentLoaded", init);
-</script>
 
 <!-- CONTATTI -->
 <div class="contatti">
@@ -205,3 +223,4 @@
 
 </body>
 </html>
+  
