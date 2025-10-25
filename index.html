@@ -177,7 +177,7 @@
 </div>
 
 <!-- OFFERTA FORMATIVA -->
-<section id="offerta">
+<section class="offerta reveal">
   <h2>📚 Offerta Formativa</h2>
 
   <!-- I NOSTRI INDIRIZZI -->
@@ -269,6 +269,30 @@
       school.for.everyone24@gmail.com
     </a>
   </div>
+  <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+  const elementi = document.querySelectorAll('.reveal');
+  const osservatore = new IntersectionObserver((voci)=>{
+    voci.forEach(voce=>{
+      if(voce.isIntersecting){
+        voce.target.classList.add('visible');
+        osservatore.unobserve(voce.target);
+      }
+    });
+  },{threshold:0.1});
+  elementi.forEach(e=>osservatore.observe(e));
+</script>
 </body>
 </html>
   
